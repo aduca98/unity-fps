@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: 8ed37e78a062f4c80b4d3bb69c2d987e
+timeCreated: 1496260653
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Circle
+    100002: Circle_002
+    100004: Circle_003
+    100006: Circle_004
+    100008: Circle_005
+    100010: Circle_006
+    100012: Circle_007
+    100014: Circle_008
+    100016: Circle_009
+    100018: Circle_010
+    100020: Circle_011
+    100022: Circle_013
+    100024: Circle_014
+    100026: Circle_015
+    100028: Circle_016
+    100030: Circle_017
+    100032: Circle_017_MeshPart0
+    100034: Circle_017_MeshPart1
+    100036: Circle_017_MeshPart2
+    100038: Circle_018
+    100040: Circle_019
+    100042: Cube
+    100044: m24
+    100046: //RootNode
+    100048: m24_hp
+    100050: m24_hp_001
+    100052: Sphere
+    400000: Circle
+    400002: Circle_002
+    400004: Circle_003
+    400006: Circle_004
+    400008: Circle_005
+    400010: Circle_006
+    400012: Circle_007
+    400014: Circle_008
+    400016: Circle_009
+    400018: Circle_010
+    400020: Circle_011
+    400022: Circle_013
+    400024: Circle_014
+    400026: Circle_015
+    400028: Circle_016
+    400030: Circle_017
+    400032: Circle_017_MeshPart0
+    400034: Circle_017_MeshPart1
+    400036: Circle_017_MeshPart2
+    400038: Circle_018
+    400040: Circle_019
+    400042: Cube
+    400044: //RootNode
+    400046: m24
+    400048: m24_hp
+    400050: m24_hp_001
+    400052: Sphere
+    2300000: Circle
+    2300002: Circle_002
+    2300004: Circle_003
+    2300006: Circle_004
+    2300008: Circle_005
+    2300010: Circle_006
+    2300012: Circle_007
+    2300014: Circle_008
+    2300016: Circle_009
+    2300018: Circle_010
+    2300020: Circle_011
+    2300022: Circle_013
+    2300024: Circle_014
+    2300026: Circle_015
+    2300028: Circle_016
+    2300030: Circle_017_MeshPart0
+    2300032: Circle_017_MeshPart1
+    2300034: Circle_017_MeshPart2
+    2300036: Circle_018
+    2300038: Circle_019
+    2300040: Cube
+    2300042: m24
+    2300044: m24_hp
+    2300046: m24_hp_001
+    2300048: Sphere
+    3300000: Circle
+    3300002: Circle_002
+    3300004: Circle_003
+    3300006: Circle_004
+    3300008: Circle_005
+    3300010: Circle_006
+    3300012: Circle_007
+    3300014: Circle_008
+    3300016: Circle_009
+    3300018: Circle_010
+    3300020: Circle_011
+    3300022: Circle_013
+    3300024: Circle_014
+    3300026: Circle_015
+    3300028: Circle_016
+    3300030: Circle_017_MeshPart0
+    3300032: Circle_017_MeshPart1
+    3300034: Circle_017_MeshPart2
+    3300036: Circle_018
+    3300038: Circle_019
+    3300040: Cube
+    3300042: m24
+    3300044: m24_hp
+    3300046: m24_hp_001
+    3300048: Sphere
+    4300000: m24_hp_001
+    4300002: Circle_002
+    4300004: m24
+    4300006: Cube
+    4300008: Circle_019
+    4300010: Circle_018
+    4300012: Circle_016
+    4300014: Circle_011
+    4300016: Sphere
+    4300018: Circle_010
+    4300020: Circle_009
+    4300022: Circle_008
+    4300024: Circle_004
+    4300026: Circle_007
+    4300028: Circle_015
+    4300030: Circle_013
+    4300032: Circle_006
+    4300034: Circle_005
+    4300036: Circle_014
+    4300038: Circle_003
+    4300040: m24_hp
+    4300042: Circle
+    4300044: Circle_017_MeshPart0
+    4300046: Circle_017_MeshPart1
+    4300048: Circle_017_MeshPart2
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
