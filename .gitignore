@@ -1,35 +1,34 @@
-$PROJDIR
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
+Library/
+Assets/AssetStoreTools*
 
-obj
-Temp
-.suo
-.user
-.pidb
-.userprefs
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
 
-$PROJDIR/Library
-
-cache
-metadata
-previews
-ScriptAssemblies
-assetDatabase3
-AssetImportState
-assetservercachev3
-AssetServerCacheV3
-AssetVersioning.db
-AudioManager.asset
-BuildPlayer.prefs
-BuildSettings.asset
-DynamicsManager.asset
-EditorSettings.asset
-EditorUserBuildSettings.asset
-expandedItems
-FailedAssetImports.txt
-guidmapper
-InspectorExpandedItems.asset
-MonoManager.asset
-NetworkManager.asset
-ScriptMapper
-unity default resources
-unity editor resources
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
