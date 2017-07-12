@@ -1,9 +1,5 @@
-﻿/*if game is not being played (just in scene/game view) take out/put away animations are fine, but when playing the rotations do weird things, probably because of sway shit
- * problem is we always want sway EXCEPT when the two animations are running and when we are ADSing 
- * can't set initialRot = gun.localRotation anymore because gun is being updated every frame
- * when i set initialRot to a constant value there is no sway, which is weird because it is set in start anyway it should be a constant value
- * in order to figure out when the animation is over i used an "indicator" state in the animator controller so i could use an indicator bool (isDone) 
- * I made an indictor script with a fxn that sets the indicator bool and that fxn is called by an animation event*/
+﻿/*some serious issues most likely because initialRot is no longer just initial; 
+ * i need some way of getting initialRot of a weapon only once (right when the weapon switch occurs)*/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -11,10 +7,10 @@ using UnityEngine;
 
 public class FPController : MonoBehaviour {
 
-	[SerializeField]
-	private Animator coltAnim;
-	[SerializeField]
-	private Animator sniperAnim;
+//	[SerializeField]
+//	private Animator coltAnim;
+//	[SerializeField]
+//	private Animator sniperAnim;
 
 	public float mouseSensitivity = 3f;
 	public float jumpHeight = 3f;
@@ -34,10 +30,8 @@ public class FPController : MonoBehaviour {
 	Quaternion initialRot;
 	public Transform rifle;
 	public Transform pistol;
+	public Transform saber;
 	Transform gun;
-
-	bool isADS;
-	bool isAnim;
 
 
 	void Start (){
@@ -45,13 +39,16 @@ public class FPController : MonoBehaviour {
 		eyes = Camera.main;
 		Cursor.lockState = CursorLockMode.Locked;
 
-//		initialRot = gun.localRotation; /*woudl be ideal in start but changes depending on weapon*/
+		gun = rifle;
+		initialRot = gun.localRotation; /*woudl be ideal in start but changes depending on weapon*/
 
-		initialRot = Quaternion.Euler (1, 1, 1);
+
 
 	}
 
 	void Update () {
+//		initialRot = gun.localRotation;
+
 		/*get WeaponSelection every frame*/
 		WeaponSelection weaponSelectionScript = FindObjectOfType<WeaponSelection> ();
 		string weaponSelection = weaponSelectionScript.weaponSelection;
@@ -60,28 +57,16 @@ public class FPController : MonoBehaviour {
 		if (weaponSelection == "Rifle") {
 			gun = rifle;
 
-			/*get isADS value every frame because it will change in different situations*/
-			SniperADSOverlay isADSScript = FindObjectOfType<SniperADSOverlay> ();
-			bool isADSSniper = isADSScript.isADS;
-			/*SniperADSDualRender isADSScript1 = FindObjectOfType<SniperADSDualRender> ();*/
-			/*bool isADS1 = isADSScript1.isADS;*/
-
-			bool isDone = sniperAnim.GetBool("isDone");
-
-			isADS = isADSSniper;
-			isAnim = isDone;
 		}
+
 		if(weaponSelection == "Pistol"){
 			gun = pistol;
 
-			/*get isADS value every frame because it will change in different situations*/
-			ColtADS isADSScript = FindObjectOfType<ColtADS> ();
-			bool isADSPistol = isADSScript;
+		}
 
-			bool isDone = coltAnim.GetBool("isDone");
+		if(weaponSelection == "Saber"){
+			gun = saber;
 
-			isADS = isADSPistol;
-			isAnim = isDone;
 		}
 
 		float fwdSpeed = Input.GetAxis ("Vertical") * moveSpeed;
@@ -109,14 +94,10 @@ public class FPController : MonoBehaviour {
 		playerSpeed = transform.rotation * playerSpeed;
 		cc.Move (playerSpeed * Time.deltaTime);
 
-		if (!isADS && isAnim) { //Gun Sway
-			rotationSpeed = Quaternion.Euler (-mouseY, mouseX * .5f, 0);
-			gun.localRotation = Quaternion.Slerp (gun.localRotation, rotationSpeed * initialRot, gunSwaySpeed * Time.deltaTime);
-		}
+		//Gun Sway
+		rotationSpeed = Quaternion.Euler (-mouseY, mouseX * .5f, 0);
+		gun.localRotation = Quaternion.Slerp (gun.localRotation, rotationSpeed * initialRot, gunSwaySpeed * Time.deltaTime);
 
-		if (isADS || !isAnim ){
-			gun.localRotation = Quaternion.Euler (2, 0f, 0f); /*no sway*/
-		}
 	}
 
 }

@@ -74,7 +74,7 @@ public class ColtShooting : MonoBehaviour {
 
 		if (Input.GetButtonDown("Fire1") && canFire){
 			ShellEjection ();
-			gunBlowTrigger.SetTrigger ("isFired");
+			gunBlowTrigger.SetTrigger ("isFired 0");
 			gunMuzzleFlash.Play();
 			recoil.StartRecoil (1f,20f,10f);
 			pistolRecoil.StartRecoil (1f, 2f, 10f);
